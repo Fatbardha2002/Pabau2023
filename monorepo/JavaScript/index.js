@@ -28,4 +28,22 @@ document.addEventListener("DOMContentLoaded", function () {
             .map(checkbox => checkbox.value);
         displayResult('Selected values: ' + selectedValues.join(', '));
     }
+
+    function updateCheckboxes(newValues) {
+        checkboxes.forEach((checkbox, index) => {
+            checkbox.value = newValues[index];
+            checkbox.checked = false; // Uncheck all checkboxes
+        });
+    }
+
+    function displayResult(message) {
+        resultDiv.textContent = message;
+    }
+
+    function shuffleArray(array) {
+        for (let i = array.length - 1; i > 0; i--) {
+            const j = Math.floor(Math.random() * (i + 1));
+            [array[i], array[j]] = [array[j], array[i]];
+        }
+    }
 });
