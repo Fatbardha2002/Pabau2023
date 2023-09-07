@@ -4,21 +4,118 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>JS Task</title>
-   
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f5f5f5;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        .container {
+            background-color: #fff;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+            padding: 20px;
+            text-align: center;
+        }
+
+        .form {
+            margin: 0;
+        }
+
+        .checkbox-label {
+            display: block;
+            position: relative;
+            padding-left: 35px;
+            margin-bottom: 15px;
+            cursor: pointer;
+            font-size: 18px;
+        }
+
+        .checkbox-label input {
+            position: absolute;
+            opacity: 0;
+            cursor: pointer;
+        }
+
+        .checkmark {
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 25px;
+            width: 25px;
+            background-color: #ccc;
+            border: 1px solid #ccc;
+            border-radius: 3px;
+        }
+
+        .checkbox-label:hover .checkmark {
+            background-color: #bbb;
+        }
+
+        .checkbox-label input:checked ~ .checkmark {
+            background-color: #007bff;
+            border: 1px solid #007bff;
+        }
+
+        .button {
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            margin-right: 10px;
+            cursor: pointer;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+
+        .button:hover {
+            background-color: #0056b3;
+        }
+
+        #result {
+            margin-top: 20px;
+            font-weight: bold;
+            font-size: 18px;
+        }
+    </style>
 </head>
 <body>
-    <h1>Checkbox Form</h1>
-    <form id="checkboxForm">
-        <input type="checkbox" name="option" value="Internship"> Internship
-        <input type="checkbox" name="option" value="Pabau"> Pabau
-        <input type="checkbox" name="option" value="Employment"> Employment
-        <input type="checkbox" name="option" value="Career"> Career
-        <br><br>
-        <button type="button" id="shuffleBtn">Shuffle Values</button>
-        <button type="button" id="changeBtn">Change Values</button>
-        <button type="button" id="showBtn">Show selected values</button>
-    </form>
-    <div id="result"></div>
+    <div class="container">
+        <h1>Checkbox Form</h1>
+        <form id="checkboxForm" class="form">
+            <label class="checkbox-label">
+                <input type="checkbox" name="option" value="Internship">
+                <span class="checkmark"></span>
+                Internship
+            </label>
+            <label class="checkbox-label">
+                <input type="checkbox" name="option" value="Pabau">
+                <span class="checkmark"></span>
+                Pabau
+            </label>
+            <label class="checkbox-label">
+                <input type="checkbox" name="option" value="Employment">
+                <span class="checkmark"></span>
+                Employment
+            </label>
+            <label class="checkbox-label">
+                <input type="checkbox" name="option" value="Career">
+                <span class="checkmark"></span>
+                Career
+            </label>
+            <br><br>
+            <button type="button" id="shuffleBtn" class="button">Shuffle Values</button>
+            <button type="button" id="changeBtn" class="button">Change Values</button>
+            <button type="button" id="showBtn" class="button">Show selected values</button>
+        </form>
+        <div id="result"></div>
+    </div>
     <script src="index.js"></script>
 </body>
 </html>

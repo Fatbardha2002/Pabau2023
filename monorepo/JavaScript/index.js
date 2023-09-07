@@ -13,13 +13,11 @@ document.addEventListener("DOMContentLoaded", function () {
         const values = Array.from(checkboxes).map(checkbox => checkbox.value);
         shuffleArray(values);
         updateCheckboxes(values);
-        displayResult(`Shuffled values: ${values.join(', ')}`);
     }
 
     function changeValues() {
         const newValues = ["Junior", "React", "Developer", "Pabau2023"];
         updateCheckboxes(newValues);
-        displayResult('Changed values: ' + newValues.join(', '));
     }
 
     function showSelectedValues() {
@@ -30,9 +28,11 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     function updateCheckboxes(newValues) {
+        const labels = document.querySelectorAll('.checkbox-label');
         checkboxes.forEach((checkbox, index) => {
             checkbox.value = newValues[index];
             checkbox.checked = false; // Uncheck all checkboxes
+            labels[index].lastChild.textContent = newValues[index]; // Update the last child (text) of the label
         });
     }
 
