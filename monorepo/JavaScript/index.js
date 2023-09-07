@@ -8,4 +8,10 @@ document.addEventListener("DOMContentLoaded", function () {
     shuffleBtn.addEventListener('click', shuffleValues);
     changeBtn.addEventListener('click', changeValues);
     showBtn.addEventListener('click', showSelectedValues);
+
+    function changeValues() {
+        const newValues = ["Junior", "React", "Developer", "Pabau2023"];
+        updateCheckboxes(newValues);
+        displayResult('Changed values: ' + newValues.join(', '));
+    }
 });
