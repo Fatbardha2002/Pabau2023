@@ -24,3 +24,5 @@ interface Intern {
     Juniors: Junior[];
     Country: string; 
   }
+
+  export { Company };
