@@ -10,7 +10,7 @@ function App() {
 
   return (
     <div className="App">
-      <Header step={step} />
+      <Header step={step} /> 
       <OptionsForm step={step} setStep={setStep} /> 
       <Footer />
     </div>

@@ -1,6 +1,5 @@
 import React, { useState,useEffect } from 'react';
-//import { BrowserRouter as Router } from 'react-router-dom'; 
-import Header from './Header';
+
 
 
 const containerStyle = {
@@ -34,7 +33,7 @@ const optionStyle = {
   width: '600px', 
   margin: '10px 0',
 };
-const additionalDivStyle = {
+const callDivStyle = {
   backgroundColor: 'white',
   padding: '20px',
   display: 'flex',
@@ -99,7 +98,7 @@ const OptionsForm = ({ step, setStep }) => {
   };
   return (
     <div style={{ ...containerStyle }}>
-       <Header step={step} /> 
+      
       {step === 1 && (
         <div style={{ ...formStyle }}>
           {options.map((option) => (
@@ -113,7 +112,7 @@ const OptionsForm = ({ step, setStep }) => {
         </div>
       )}
       {step === 2 && (
-        <div style={{ ...additionalDivStyle, marginTop: '10px' }}>
+        <div style={{ ...callDivStyle, marginTop: '10px' }}>
           <p style={{ margin: 0, textAlign: 'center', color: 'rgb(118, 118, 118)' }}>
             <span style={{ color: 'green' }}>{options[selectedOption - 1].name}</span>.
           </p>
@@ -125,7 +124,7 @@ const OptionsForm = ({ step, setStep }) => {
         </div>
       )}
       {step === 1 && (
-        <div style={{ ...additionalDivStyle, marginTop: '10px' }}>
+        <div style={{ ...callDivStyle, marginTop: '10px' }}>
           <p style={{ margin: 0, textAlign: 'center', color: 'rgb(118, 118, 118)' }}>
             Not sure about consultation type? Please, call{' '}
             <span style={{ color: 'blue' }}>0203 7959063</span>.

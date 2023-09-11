@@ -2,7 +2,7 @@ import React from 'react';
 
 const Header = ({ step }) => {
  
-  const stepCount = step === 1 ? '1/1' : '2/2';
+  const stepCount = step === 1 ? '1/2' : '2/2';
 
   return (
     <header style={headerStyle}>
