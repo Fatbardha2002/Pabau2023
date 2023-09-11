@@ -28,11 +28,13 @@ const innerHeaderStyle = {
 const titleStyle = {
   fontSize: '24px',
   fontWeight: 'bold',
+  color: '#555',
 };
 
 const stepStyle = {
   fontSize: '18px',
-  color: '#888',
+  color: '#777',
+  
 };
 
 export default Header;

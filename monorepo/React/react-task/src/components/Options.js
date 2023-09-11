@@ -1,7 +1,5 @@
 import React, { useState } from 'react';
 
-
-
 const containerStyle = {
   backgroundColor: '#f4f4f4', 
   padding: '20px',
@@ -26,13 +24,32 @@ const optionStyle = {
   display: 'flex',
   alignItems: 'center',
   padding: '10px',
-  border: '1px solid #ccc',
+  border: '1px solid #eee',
   margin: '5px 0',
   cursor: 'pointer',
   height: '50px',
   width: '600px', 
   margin: '10px 0',
 };
+const imageStyle = {
+  width: '50px',
+  height: '50px',
+  marginRight: '15px',
+};
+
+const nameStyle = {
+  fontSize: '16px',
+  fontFamily: 'Arial, sans-serif',
+  fontWeight: 'bold',        // Make the text bolder
+  color: '#666', 
+};
+
+const arrowStyle = {
+  fontSize: '24px',
+  marginLeft: 'auto',
+  color: '#999',
+};
+
 const callDivStyle = {
   backgroundColor: 'white',
   padding: '20px',
@@ -43,21 +60,6 @@ const callDivStyle = {
   width:'630px' ,
   height:'10px',
 
-};
-const imageStyle = {
-  width: '50px',
-  height: '50px',
-  marginRight: '15px',
-};
-
-const nameStyle = {
-  fontSize: '16px',
-  fontWeight: 'bold',
-};
-
-const arrowStyle = {
-  fontSize: '24px',
-  marginLeft: 'auto',
 };
 
 const Option = ({ imageSrc, name, onClick }) => (
