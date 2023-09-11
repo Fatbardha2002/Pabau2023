@@ -1,8 +1,8 @@
 import React from 'react';
 
 const Header = ({ step }) => {
-  const maxSteps = 2;
-  const stepCount = `${step}/${maxSteps}`;
+ 
+  const stepCount = step === 1 ? '1/1' : '2/2';
 
   return (
     <header style={headerStyle}>

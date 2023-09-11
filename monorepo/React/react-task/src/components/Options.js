@@ -1,7 +1,6 @@
 import React, { useState,useEffect } from 'react';
 //import { BrowserRouter as Router } from 'react-router-dom'; 
-//import Routes1 from './Routes'; 
-//import Header from './Header';
+import Header from './Header';
 
 
 const containerStyle = {
@@ -73,9 +72,8 @@ const Option = ({ imageSrc, name, onClick }) => (
   </div>
 );
 
-const OptionsForm = () => {
+const OptionsForm = ({ step, setStep }) => {
   const [selectedOption, setSelectedOption] = useState(null);
-  const [step, setStep] = useState(1);
 
   const options = [
     { id: 1, imageSrc: '../assets/botox.jpg', name: 'Botox' },
@@ -101,6 +99,7 @@ const OptionsForm = () => {
   };
   return (
     <div style={{ ...containerStyle }}>
+       <Header step={step} /> 
       {step === 1 && (
         <div style={{ ...formStyle }}>
           {options.map((option) => (
